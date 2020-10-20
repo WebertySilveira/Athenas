@@ -1,4 +1,6 @@
+---------------------------------------------------------------------------------------------------------
 # Desafio Athenas
+---------------------------------------------------------------------------------------------------------
 
 * >CLONANDO O PROJETO
 
@@ -6,6 +8,8 @@
 - [X] CRIE UM BANCO MYSQL E IMPORTE O ARQUIVO banco.sql
 - [X] DENTRO DE Classes/Connection.php NA VARIÁVEL $servDB, ALTERE host E dbname PARA O QUE FOR UTILIZAR
 
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------
 
 * >FUNÇÃO DAS PASTAS
@@ -21,6 +25,8 @@
 
 
 ---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------
 
 * >COMO FUNCIONA
 
@@ -32,6 +38,6 @@ LISTA TODOS OS USUÁRIOS CADASTRADAS, PODENDO EDITAR, PESQUISAR OU REMOVER DO BA
 ### ADICIONAR
 CRUD DE CATEGORIAS. LOCAL DE CADASTRO DE NOVOS USUÁRIOS, SALVANDO COM A CATEGORIA DESEJADA.
 
-![](hhttps://github.com/WebertySilveira/Athenas/images/Adicionar.png)
+![](https://github.com/WebertySilveira/Athenas/blob/main/images/Adicionar.png)
 
 
