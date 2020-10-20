@@ -3,7 +3,7 @@
 <div class="row container">
     <div class="col s12"> 
         <p>&nbsp;</p>    
-        <h5 class="light">Cadastro de Pessoas</h5><hr>
+        <h5 class="light">Cadastro de Pessoas</h5><hr><br><br>
 
         <?php 
             $id_categoria = filter_input(INPUT_GET, 'id', FILTER_SANITIZE_SPECIAL_CHARS);

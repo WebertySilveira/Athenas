@@ -4,6 +4,6 @@
 
         public function create();
         public function read($search);
-        public function update($idpessoa, $nome, $email, $id_categoria);
-        public function delete($idpessoa);
+        public function update($id, $nome, $email, $id_categoria);
+        public function delete($id);
     }

@@ -4,10 +4,10 @@
 
     class Pessoas extends Connection implements crudPessoas{
 
-        private $idpessoa, $nome, $email, $id_categoria;
+        private $id, $nome, $email, $id_categoria;
 
-        protected function setId($idpessoa){
-            $this->id = $idpessoa;
+        protected function setId($id){
+            $this->id = $id;
         }
         protected function setNome($nome){
             $this->nome = $nome;
@@ -37,6 +37,24 @@
             $this->setNome($nome);
             $this->setEmail($email);
             $this->setCategoria($id_categoria);
+        }
+
+        public function dadosDaTabela($id){
+            $conn = $this->connect();
+
+            $this->setId($id);
+            $_id = $this->getId();
+
+            $sql = "SELECT * FROM pessoa WHERE idpessoa = :id";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':id', $_id);
+            $stmt->execute();
+
+            $result = $stmt->fetchAll();
+
+            foreach ($result as $values) {
+                require_once "../forms/form-edit-pessoa.php";
+            }
         }
 
 
@@ -77,18 +95,59 @@
             $result = $stmt->fetchAll();
 
             foreach ($result as $values) {
+
+                $this->setId($values['idpessoa']);
+                $id = $this->getId();
+
                 echo "<tr>";
                 echo "<td>" .$values['idpessoa']. "</td>";
                 echo "<td>" .$values['nome']. "</td>";
                 echo "<td>" .$values['email']. "</td>";
                 echo "<td>" .$values['NOME']. "</td>";
+
+                echo "<td><a href='edit-pessoa.php?id=$id' class='btn btn-small'>Editar</a></td>";
+                echo "<td><a href='../database/pessoas/delete.php?id=$id' class='btn btn-small red'>Deletar</a></td>";
                 echo "</tr>";
             }
         }
-        public function update($idpessoa, $nome, $email, $id_categoria){
+        public function update($id, $nome, $email, $id_categoria){
+            $conn = $this->connect();
+
+
+            $this->setId($id);
+            $this->setNome($nome);
+            $this->setEmail($email);
+            $this->setCategoria($id_categoria);
+
+            $_id = $this->getId();
+            $_nome = $this->getNome();
+            $_email = $this->getEmail();
+            $_categoria = $this->getCategoria();
+
+            $sql = "UPDATE pessoa SET nome = :nome, email = :email, id_categoria = :categoria
+                    WHERE idpessoa = :id";
+
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':id', $_id);
+            $stmt->bindParam(':nome', $_nome);
+            $stmt->bindParam(':email', $_email);
+            $stmt->bindParam(':categoria', $_categoria);
+            $stmt->execute();
+
+            $destino = header('Location: ../../public/home.php');
 
         }
-        public function delete($idpessoa){
+        public function delete($id){
+            $conn = $this->connect();
 
+            $this->setId($id);
+            $id = $this->getId();
+
+            $sql = "DELETE FROM pessoa WHERE idpessoa = :id";
+            $stmt = $conn->prepare($sql);
+            $stmt->bindParam(':id', $id);
+            $stmt->execute();
+
+            $destino = header("Location: ../../public/home.php");
         }
     }

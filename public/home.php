@@ -6,7 +6,7 @@
 <div class="row container">
     <div class="col s12"> 
         <p>&nbsp;</p>    
-        <h5 class="light">Pessoas</h5><hr>
+        <h5 class="light">Pessoas</h5><hr><br><br>
         
         <?php require_once '../forms/form-consulta.php' ?>
 
@@ -20,6 +20,7 @@
                 </tr>
             </thead>
             <tbody>
+                <h5 class="light">Dados Cadastrados</h5><hr>
                 <?php
                     require_once "../database/pessoas/read.php";
                 ?>
