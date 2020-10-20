@@ -27,7 +27,7 @@
 ### HOME
 LISTA TODOS OS USUÁRIOS CADASTRADAS, PODENDO EDITAR, PESQUISAR OU REMOVER DO BANCO.
 
-![](hhttps://github.com/WebertySilveira/Athenas/images/Home.png)
+![](https://github.com/WebertySilveira/Athenas/blob/main/images/Home.png)
 
 ### ADICIONAR
 CRUD DE CATEGORIAS. LOCAL DE CADASTRO DE NOVOS USUÁRIOS, SALVANDO COM A CATEGORIA DESEJADA.
