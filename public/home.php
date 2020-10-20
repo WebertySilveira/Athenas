@@ -6,7 +6,7 @@
 <div class="row container">
     <div class="col s12"> 
         <p>&nbsp;</p>    
-        <h5 class="light">Pessoas</h5><hr><br><br>
+        <h5 class="light">Pesquisar</h5><hr><br><br>
         
         <?php require_once '../forms/form-consulta.php' ?>
 

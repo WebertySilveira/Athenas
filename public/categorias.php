@@ -5,7 +5,7 @@
     <div class="row container">
         <div class="col s12"> 
             <p>&nbsp;</p>    
-            <h5 class="light">Cadastro de Categorias</h5><hr><br><br>
+            <h5 class="light">Adicionar</h5><hr><br><br>
 
             <?php 
                 if (isset($_SESSION['sucesso'])) {

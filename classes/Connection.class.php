@@ -2,7 +2,7 @@
 
     abstract class Connection {
 
-        private $servDB = 'mysql:host=localhost; dbname=athenas';
+        private $servDB = 'mysql:host=localhost; dbname=athenas2';
         private $user = 'root';
         private $pass = '';
 
